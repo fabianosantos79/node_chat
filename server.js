@@ -9,8 +9,19 @@ const io = socketIO(server);
 
 server.listen(3000);
 
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'public')));
 
-io.on('connection', (onChat) => {
+let connectedUsers = [];
+
+io.on('connection', (socket) => {
     console.log('Conexão detectada...');
+
+    socket.on('join-request', (username) =>{
+        socket.username = username;
+        connectedUsers.push(username);
+        console.log(connectedUsers);
+
+        socket.emit('user-ok', connectedUsers)
+
+    })
 })
