@@ -19,8 +19,8 @@ ul, li{
 }
 
 #loginPage{
-    display: none ;
-    background-color: aliceblue;
+    display: flex;
+    background-color: #fff;
 }
 
 #loginNameInput{
@@ -35,7 +35,7 @@ ul, li{
 }
 
 #chatPage{
-    display: flex;
+    display: none;
 }
 
 .chatArea{
@@ -64,9 +64,60 @@ ul, li{
 .chatList{
     flex: 1;
     background-color: rgb(255, 255, 255);
+    overflow-y: scroll;
+    max-height: calc(100vh - 40px);
+}
+
+.chatList li{
+    padding: 3px 15px;
+    font-size: 15px;
+}
+
+.chatList li.m-status.on{
+    color:forestgreen;
+    font-style: italic;
+}
+
+.chatList li.m-status.off{
+    color:red;
+    font-style: italic;
+}
+
+.chatList li.m-txt{
+    margin-bottom: 10px;
+    max-width: 600px;
+    padding: 10px;
+}
+
+.chatList li.m-txt span{
+    background-color:blue;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    margin-right: 10px;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+.chatList li.m-txt span.me{
+    background-color:forestgreen;
+    color: #fff;
 }
 
 .userList{
     width: 200px;
     background-color: #cecece;
+    overflow-y:scroll;
+    max-height: calc(100vh - 40px);
+}
+
+.userList li{
+    font-size: 18px;
+    padding: 8px 15px;
+    border-bottom:1px solid #a7a5a5;
+}
+
+.userList li.you{
+    font-weight: bold;
+    background-color:#a7a5a5;
 }
