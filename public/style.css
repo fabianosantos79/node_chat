@@ -69,8 +69,11 @@ ul, li{
 }
 
 .chatList li{
+    display: flex;
     padding: 3px 15px;
     font-size: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 .chatList li.m-status.on{
@@ -85,8 +88,15 @@ ul, li{
 
 .chatList li.m-txt{
     margin-bottom: 10px;
-    max-width: 600px;
+    
     padding: 10px;
+}
+
+.chatList li.m-txt-me{
+    margin-bottom: 10px;
+    
+    padding: 10px;
+    justify-content: flex-end;
 }
 
 .chatList li.m-txt span{
@@ -99,13 +109,19 @@ ul, li{
     border-radius: 20px;
 }
 
-.chatList li.m-txt span.me{
+.chatList li.m-txt-me span.me{
     background-color:forestgreen;
     color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    margin-right: 10px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    justify-content: flex-end;
 }
 
 .userList{
-    width: 200px;
+    width: 300px;
     background-color: #cecece;
     overflow-y:scroll;
     max-height: calc(100vh - 40px);
