@@ -31,9 +31,9 @@ function addMessage(type, user, msg) {
             break;
         case 'msg':
             if(username == user){
-                ul.innerHTML += '<li class="m-txt-me"><span class="me">'+user+'</span>'+msg+'</li>';
+                ul.innerHTML += '<li class="m-txt-me"><p class="text-me">'+msg+'</p><span class="me">'+user+'</span></li>';
             }else{
-                ul.innerHTML += '<li class="m-txt"><span>'+user+'</span>'+msg+'</li>';
+                ul.innerHTML += '<li class="m-txt"><span>'+user+'</span><p class="text">'+msg+'</p></li>';
             }
             break;
     

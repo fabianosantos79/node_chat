@@ -21,13 +21,23 @@ ul, li{
 #loginPage{
     display: flex;
     background-color: #fff;
+    background-image: url('background-chat.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#loginPage h1{
+    margin-top: 450px;
+    color: #ffffff;
+    padding: 5px;
 }
 
 #loginNameInput{
     width: 100%;
     max-width: 400px;
-    background-color: #ccc;
-    border: 1px solid #757575;
+    margin-top: -25px;
+    background-color: #ffffff;
+    border: 5px solid #2684BB;
     border-radius: 5px;
     outline: 0;
     font-size: 18;
@@ -63,7 +73,7 @@ ul, li{
 
 .chatList{
     flex: 1;
-    background-color: rgb(255, 255, 255);
+    background-color: #ffffff;
     overflow-y: scroll;
     max-height: calc(100vh - 40px);
 }
@@ -89,36 +99,43 @@ ul, li{
 .chatList li.m-txt{
     margin-bottom: 10px;
     padding: 10px;
-    border: 1px solid #000;
-    width: 400px;
 }
 
 .chatList li.m-txt-me{
     margin-bottom: 10px;
     padding: 10px;
     justify-content: flex-end;
-    border: 1px solid #000;
-    width: 400px;
-    left: 500px;
 }
 
-.chatList li.m-txt span{
-    background-color:blue;
-    color: #fff;
+.chatList li p.text{
+    background-color:#f0efef;
     font-size: 15px;
+    padding: 20px 30px;
+    border-radius: 0 20px 20px 20px;
+}
+
+.chatList li p.text-me{
+    background-color:#f0efef;
+    font-size: 15px;
+    padding: 20px 30px;
+    border-radius: 20px 0 20px 20px;
+}
+
+
+
+.chatList li.m-txt span{
+    color:blue;
+    font-size: 18px;
     font-weight: bold;
-    margin-right: 10px;
-    padding: 3px 10px;
+    margin-left: 10px;
     border-radius: 20px;
 }
 
 .chatList li.m-txt-me span.me{
-    background-color:forestgreen;
-    color: #fff;
-    font-size: 15px;
+    color:forestgreen;
+    font-size: 18px;
     font-weight: bold;
     margin-right: 10px;
-    padding: 3px 10px;
     border-radius: 20px;
     
 }
