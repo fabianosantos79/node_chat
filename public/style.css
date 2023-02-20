@@ -77,7 +77,7 @@ ul, li{
 }
 
 .chatList li.m-status.on{
-    color:forestgreen;
+    color:rgb(34, 74, 139);
     font-style: italic;
 }
 
@@ -88,15 +88,18 @@ ul, li{
 
 .chatList li.m-txt{
     margin-bottom: 10px;
-    
     padding: 10px;
+    border: 1px solid #000;
+    width: 400px;
 }
 
 .chatList li.m-txt-me{
     margin-bottom: 10px;
-    
     padding: 10px;
     justify-content: flex-end;
+    border: 1px solid #000;
+    width: 400px;
+    left: 500px;
 }
 
 .chatList li.m-txt span{
@@ -117,7 +120,7 @@ ul, li{
     margin-right: 10px;
     padding: 3px 10px;
     border-radius: 20px;
-    justify-content: flex-end;
+    
 }
 
 .userList{

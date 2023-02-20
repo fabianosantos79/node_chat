@@ -5,7 +5,7 @@ let userList = [];
 let loginPage = document.querySelector('#loginPage');
 let chatPage = document.querySelector('#chatPage');
 
-let loginInput = document.querySelector('#loginNameInput').focus();
+let loginInput = document.querySelector('#loginNameInput');
 let textInput = document.querySelector('#chatTextInput');
 
 loginPage.style.display = 'flex';
@@ -17,7 +17,7 @@ function renderUserList() {
     ul.innerHTML = '';
 
     userList.forEach(i => {
-        ul.innerHTML += `<li>${i}</li>`;
+            ul.innerHTML += `<li>${i}</li>`;
     })
 }
 
@@ -91,7 +91,7 @@ socket.on('list-update', (data) => {
     }
 
     if(data.left){
-        addMessage('status', null, data.left + ' saiu no chat.')
+        addMessage('status', null, data.left + ' saiu do chat.')
     }
     
     userList = data.list;
@@ -111,6 +111,7 @@ socket.on('disconnect', () => {
     userList = [];
     renderUserList();
 })
+
 
 socket.on('reconnect_error', () => {
     addMessage('status', null, 'Tentando reconectar....')
